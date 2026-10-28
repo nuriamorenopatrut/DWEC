@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla Multiplicar</title>
+  </head>
+  <body>
+    <script>
+      let entrada = prompt("Dame un número:");
+      let numero = Number(entrada);
+
+      //Condicional para saber si el valor introducido es igual o mayor a 0
+      if (
+        isNaN(numero) ||
+        entrada === null ||
+        entrada.trim() === "" ||
+        numero < 0
+      ) {
+        //Se muestra un warning por consola si el valor que ha introducido el usuario no es un número o es menor a 0
+        console.warn(
+          "Aviso: El valor introducido no es un número válido o es menor que 0.",
+        );
+      } else {
+        //  Se muestra
+        console.log(`--- Tabla de multiplicar del ${numero} ---`);
+
+        // Creación de la lista desordenada para poder añadirla al HTML
+        let contenidoHTML = `<h1>Tabla de multiplicar del ${numero}</h1>`;
+        contenidoHTML += `<ul>`;
+
+        // Bucle del 0 al 10 para calcular la tabla
+        for (let i = 0; i <= 10; i++) {
+          let resultado = numero * i;
+
+          // Se muestran las líneas por consola
+          console.log(`${numero} x ${i} = ${resultado}`);
+
+          // 8. Se añade el elemento de la lista para mostrarlo en el HTML
+          contenidoHTML += `<li>${numero} x ${i} = ${resultado}</li>`;
+        }
+
+        contenidoHTML += `</ul>`;
+
+        // Se muestra el contenido
+        document.body.innerHTML = contenidoHTML;
+      }
+    </script>
+  </body>
+</html>

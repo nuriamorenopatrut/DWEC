@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nombreusuario</title>
+  </head>
+  <body>
+    <script>
+      let entrada = prompt("Introduce tu correo electrónico:");
+      let correo = String(entrada);
+      correo = correo.trim();
+      let partes = correo.split("@"); //se divide el correo desde el @, es decir, se divide entre lo que hay antes del @ y después del @
+      let nombreusuario = partes[0]; //La variable se queda con la parte que hay antes del @
+      document.body.innerHTML = `<h1>Bienvenid@, ${nombreusuario}</h1>`;
+    </script>
+  </body>
+</html>

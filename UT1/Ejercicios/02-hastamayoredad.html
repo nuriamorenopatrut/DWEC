@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hastamayoredad</title>
+  </head>
+  <body>
+    <script>
+      let edad = 0;
+
+      // 2. Mientras la edad sea menor de 18, el bucle se repite
+      while (edad < 18) {
+        let entrada = prompt("Introduce tu edad (debes ser mayor de 18):");
+
+        //Se actualiza la variable edad convirtiendo a esta en la nueva entrada
+        edad = Number(entrada);
+      }
+
+      document.body.innerHTML = `<h1>¡Bienvenido/a! Acceso concedido (Edad: ${edad} años).</h1>`;
+    </script>
+  </body>
+</html>

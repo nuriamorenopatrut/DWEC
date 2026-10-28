@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carta</title>
+  </head>
+  <body>
+    <script>
+      // Creación de variables
+      let nombre = (prompt("Introduce el NOMBRE:") || "").trim();
+      let curso = (prompt("Introduce el nombre del CURSO:") || "").trim();
+      let localidad = (prompt("Introduce la LOCALIDAD:") || "").trim();
+      let fechaInicio = (prompt("Introduce la FECHA DE INICIO:") || "").trim();
+      let fechaFin = (prompt("Introduce la FECHA DE FIN:") || "").trim();
+
+      let cartaHTML = `
+            <p>Estimado <strong>${nombre}</strong>,</p>
+            <p>Bienvenido al curso de <strong>${curso}</strong> que se celebrará en la localidad de <strong>${localidad}</strong> entre las fechas <strong>${fechaInicio}</strong> y <strong>${fechaFin}</strong>. Espero que el curso se desarrolle según sus expectativas. Estaremos encantados de atenderle.</p>
+            <p>Atentamente,<br>
+            <strong>La dirección.</strong></p>
+        `;
+
+      // Se muestra el resultado final en el documento HTML
+      document.body.innerHTML = cartaHTML;
+    </script>
+  </body>
+</html>
