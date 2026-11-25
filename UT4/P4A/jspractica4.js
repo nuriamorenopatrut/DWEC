@@ -98,13 +98,6 @@ aqui metemos el codigo para crear las tarjetas de los heroes
     }
   }
 
-  /*
-
-    Ahora crea un enlace al final del footer que permita descargar el HTML que has creado
-
-
-
-  */
   const a = document.createElement("a");
   //cuidadiinn joorrlll, que estamos con un literal de cadena
   const archivo = new Blob(
