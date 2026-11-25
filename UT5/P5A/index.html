@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 5</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="cabecera">
+      <h1 class="cabecera__titulo">Tienda de Mascotas</h1>
+    </header>
+
+    <main class="contenido">
+      <section class="formulario">
+        <h2 class="formulario__titulo" id="tituloFormulario">Nueva mascota</h2>
+        <form class="formulario__form" id="formMascota" novalidate>
+          <div class="formulario__campo">
+            <label class="formulario__label" for="nombre">Nombre *</label>
+            <input class="formulario__input" type="text" id="nombre" />
+            <span class="formulario__error" id="errorNombre"></span>
+          </div>
+
+          <div class="formulario__campo">
+            <label class="formulario__label" for="descripcion"
+              >Descripción</label
+            >
+            <input class="formulario__input" type="text" id="descripcion" />
+          </div>
+
+          <div class="formulario__campo">
+            <label class="formulario__label" for="imagen"
+              >URL de la imagen *</label
+            >
+            <input
+              class="formulario__input"
+              type="url"
+              id="imagen"
+              placeholder="https://.../foto.jpg"
+            />
+            <span class="formulario__error" id="errorImagen"></span>
+          </div>
+
+          <div class="formulario__campo">
+            <label class="formulario__label" for="fecha"
+              >Fecha de nacimiento *</label
+            >
+            <input class="formulario__input" type="date" id="fecha" />
+            <span class="formulario__error" id="errorFecha"></span>
+          </div>
+
+          <div class="formulario__campo">
+            <label class="formulario__label" for="precio">Precio (€) *</label>
+            <input
+              class="formulario__input"
+              type="number"
+              id="precio"
+              step="0.01"
+            />
+            <span class="formulario__error" id="errorPrecio"></span>
+          </div>
+
+          <div class="formulario__campo">
+            <label class="formulario__label" for="codigo">Código *</label>
+            <input
+              class="formulario__input"
+              type="text"
+              id="codigo"
+              placeholder="CAT123"
+              maxlength="6"
+            />
+            <span class="formulario__error" id="errorCodigo"></span>
+          </div>
+
+          <div class="formulario__botones">
+            <button
+              class="formulario__boton formulario__boton--enviar"
+              type="submit"
+              id="btnEnviar"
+            >
+              Agregar Mascota
+            </button>
+            <button
+              class="formulario__boton formulario__boton--cancelar formulario__boton--oculto"
+              type="button"
+              id="btnCancelar"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="lista">
+        <h2 class="lista__titulo">Mascotas</h2>
+        <p class="lista__vacio" id="mensajeVacio">Todavía no hay mascotas.</p>
+        <div class="lista__fichas" id="listaMascotas"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
